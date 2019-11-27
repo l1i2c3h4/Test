@@ -133,24 +133,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="测试页面\耗材购物车.aspx" />
-    <EntityDeploy Include="实体框架类\HaoCai.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HaoCai.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="实体框架类\HaoCai.edmx.diagram">
-      <DependentUpon>HaoCai.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="实体框架类\HaoCai.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>HaoCai.Context.cs</LastGenOutput>
-      <DependentUpon>HaoCai.edmx</DependentUpon>
-    </Content>
-    <Content Include="实体框架类\HaoCai.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HaoCai.edmx</DependentUpon>
-      <LastGenOutput>HaoCai1.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -213,19 +196,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
-    <Compile Include="实体框架类\HaoCai.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HaoCai.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="实体框架类\HaoCai.cs">
-      <DependentUpon>HaoCai.tt</DependentUpon>
-    </Compile>
-    <Compile Include="实体框架类\HaoCai.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HaoCai.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -248,11 +218,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="实体框架类\HaoCai1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HaoCai.tt</DependentUpon>
-    </Compile>
     <Compile Include="测试页面\Card.cs" />
     <Compile Include="测试页面\CardItem.cs" />
     <Compile Include="测试页面\HaoCaiDAL.cs" />
@@ -266,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="实体框架类\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
