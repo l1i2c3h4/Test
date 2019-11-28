@@ -30,6 +30,8 @@ namespace Test.测试页面
 
             else
             {
+
+                HaoCai = new CardItem();
                 HaoCai.HCID = ID;
                 HaoCai.name = name;
                 HaoCai.num = number;
