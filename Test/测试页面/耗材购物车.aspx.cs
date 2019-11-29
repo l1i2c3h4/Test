@@ -37,5 +37,23 @@ namespace Test.测试页面
             bindData();
              
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string strTempValue = string.Empty;
+            foreach (GridViewRow gvr in GridView1.Rows)
+            {
+                CheckBox cb = (CheckBox)gvr.FindControl("CheckBox1");  //CheckBoxId为选择框的id
+                if (cb.Checked)
+                {
+                    if (Session["haocai"] == null)
+                        Session["haocai"] = new Card();
+                    Card card = Session["haocai"] as Card;
+                    strTempValue = GridView1.DataKeys[gvr.RowIndex].Value.ToString();
+                    card.addHaoCai(Convert.ToInt32(strTempValue), -1, "0");
+                }
+            }
+            bindData();
+        }
     }
 }

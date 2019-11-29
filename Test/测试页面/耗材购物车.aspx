@@ -20,9 +20,17 @@
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             &nbsp;
             <asp:Button ID="Button1" runat="server" Text="增加" OnClick="Button1_Click" />
+            &nbsp;
+            <asp:Button ID="Button2" runat="server" Text="删除" OnClick="Button2_Click" />
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="HCID">
                 <Columns>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:CheckBox ID="CheckBox1" runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:BoundField DataField="HCID" HeaderText="耗材ID" />
                     <asp:BoundField DataField="name" HeaderText="耗材名称" />
                     <asp:BoundField DataField="num" HeaderText="耗材数量" />
